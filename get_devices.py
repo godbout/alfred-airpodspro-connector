@@ -41,7 +41,7 @@ for i, mac in enumerate(deviceMacs):
     item = {
         "type": "default",
         "title": deviceNames[i],
-        "subtitle": "MAC: " + mac + ("  (These probably are your AirPods!)" if "AirPods" in deviceNames[i] else ""),
+        "subtitle": "MAC: " + mac + ("  (These probably are your AirPods Pro!)" if "AirPods" in deviceNames[i] else ""),
         "arg": mac,
         "icon": {
             "path": "icon.png"

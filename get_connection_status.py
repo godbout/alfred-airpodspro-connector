@@ -14,7 +14,7 @@ if mac == None or mac == "":
                 "uid": 0,
                 "type": "default",
                 "title": "Your setup isn't completet yet.",
-                "subtitle": "Configure your AirPods device to get started.",
+                "subtitle": "Configure your AirPods Pro device to get started.",
                 "arg": "unconfigured",
                 "icon": {
                     "path": "unconfigured.png"
@@ -44,7 +44,7 @@ menu = {
         {
             "uid": 0,
             "type": "default",
-            "title": "Disconnect AirPods" if status == "connected" else "Connect AirPods",
+            "title": "Disconnect AirPods Pro" if status == "connected" else "Connect AirPods Pro",
             "subtitle": "Status: " + status,
             "arg": status,
             "icon": {
