@@ -4,8 +4,6 @@
 <dict>
 	<key>bundleid</key>
 	<string>mo.com.sleeplessmind.airpods-pro-connector</string>
-	<key>category</key>
-	<string>Productivity</string>
 	<key>connections</key>
 	<dict>
 		<key>01344906-E1B8-4115-AED5-B6C0ED22FBDD</key>
@@ -585,6 +583,14 @@ fi</string>
 			<integer>2</integer>
 		</dict>
 		<dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.junction</string>
+			<key>uid</key>
+			<string>420CF40D-9012-4C63-813F-84A47893A229</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
 			<key>config</key>
 			<dict>
 				<key>argument</key>
@@ -599,14 +605,6 @@ fi</string>
 			<string>alfred.workflow.utility.argument</string>
 			<key>uid</key>
 			<string>A4AE1E72-2AEF-4CAA-AE28-77D1F14A245A</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.junction</string>
-			<key>uid</key>
-			<string>420CF40D-9012-4C63-813F-84A47893A229</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>

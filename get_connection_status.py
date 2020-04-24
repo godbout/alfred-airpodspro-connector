@@ -16,9 +16,6 @@ if mac == None or mac == "":
                 "title": "Your setup isn't completet yet.",
                 "subtitle": "Configure your AirPods Pro device to get started.",
                 "arg": "unconfigured",
-                "icon": {
-                    "path": "unconfigured.png"
-                }
             }
         ]
     }
@@ -47,9 +44,6 @@ menu = {
             "title": "Disconnect AirPods Pro" if status == "connected" else "Connect AirPods Pro",
             "subtitle": "Status: " + status,
             "arg": status,
-            "icon": {
-                "path": "icon.png" if status == "disconnected" else "disconnect.png"
-            }
         }
     ]
 }
