@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>bundleid</key>
-	<string>de.mariuskiessling.alfred-airpods-connector</string>
+	<string>mo.com.sleeplessmind.airpods-pro-connector</string>
 	<key>category</key>
-	<string>Tools</string>
+	<string>Productivity</string>
 	<key>connections</key>
 	<dict>
 		<key>01344906-E1B8-4115-AED5-B6C0ED22FBDD</key>
@@ -101,6 +101,19 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>3884B91F-F602-469B-B325-73F19E957694</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>6A93EB8B-2C09-45EE-B95D-2DEFD43491D5</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>94F5A1C6-904D-4634-A7C6-E15125D803B8</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -277,13 +290,13 @@
 		</array>
 	</dict>
 	<key>createdby</key>
-	<string>Marius Kießling</string>
+	<string>Guillaume Leclerc</string>
 	<key>description</key>
-	<string>Quickly connect your AirPods!</string>
+	<string>Quickly connect your AirPods Pro!</string>
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
-	<string>AirPods Connector</string>
+	<string>AirPods Pro Connector</string>
 	<key>objects</key>
 	<array>
 		<dict>
@@ -293,6 +306,8 @@
 				<false/>
 				<key>alfredfiltersresultsmatchmode</key>
 				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
 				<key>argumenttrimmode</key>
 				<integer>0</integer>
 				<key>argumenttype</key>
@@ -331,7 +346,7 @@ EOB</string>
 			<key>uid</key>
 			<string>9A8B35BB-F0A4-4634-9CA2-338AE0D4F306</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -339,7 +354,7 @@ EOB</string>
 				<key>argumenttype</key>
 				<integer>2</integer>
 				<key>keyword</key>
-				<string>airp config</string>
+				<string>airpod config</string>
 				<key>subtext</key>
 				<string></string>
 				<key>text</key>
@@ -361,6 +376,8 @@ EOB</string>
 				<false/>
 				<key>alfredfiltersresultsmatchmode</key>
 				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
 				<key>argumenttrimmode</key>
 				<integer>0</integer>
 				<key>argumenttype</key>
@@ -405,7 +422,7 @@ EOB</string>
 			<key>uid</key>
 			<string>01344906-E1B8-4115-AED5-B6C0ED22FBDD</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -552,9 +569,7 @@ fi</string>
 				<key>hotkey</key>
 				<integer>0</integer>
 				<key>hotmod</key>
-				<integer>1441792</integer>
-				<key>hotstring</key>
-				<string>A</string>
+				<integer>0</integer>
 				<key>leftcursor</key>
 				<false/>
 				<key>modsmode</key>
@@ -568,6 +583,14 @@ fi</string>
 			<string>90FA4876-C966-4851-AA0B-55A63C8224CE</string>
 			<key>version</key>
 			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.junction</string>
+			<key>uid</key>
+			<string>420CF40D-9012-4C63-813F-84A47893A229</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -584,14 +607,6 @@ fi</string>
 			<string>alfred.workflow.utility.argument</string>
 			<key>uid</key>
 			<string>A4AE1E72-2AEF-4CAA-AE28-77D1F14A245A</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.junction</string>
-			<key>uid</key>
-			<string>420CF40D-9012-4C63-813F-84A47893A229</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -644,6 +659,8 @@ fi</string>
 				<false/>
 				<key>alfredfiltersresultsmatchmode</key>
 				<integer>2</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
 				<key>argumenttrimmode</key>
 				<integer>0</integer>
 				<key>argumenttype</key>
@@ -651,7 +668,7 @@ fi</string>
 				<key>escaping</key>
 				<integer>0</integer>
 				<key>keyword</key>
-				<string>airp</string>
+				<string>apc</string>
 				<key>queuedelaycustom</key>
 				<integer>3</integer>
 				<key>queuedelayimmediatelyinitially</key>
@@ -682,7 +699,7 @@ fi</string>
 			<key>uid</key>
 			<string>4A70705E-AAE0-46B4-8202-6073D1CBDFE8</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -778,17 +795,58 @@ fi</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>2</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>apd</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Updating the connection status of your AirPods...</string>
+				<key>script</key>
+				<string></string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string>get_connection_status.py</string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>Disconnect AirPods</string>
+				<key>type</key>
+				<integer>8</integer>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>6A93EB8B-2C09-45EE-B95D-2DEFD43491D5</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
 	</array>
 	<key>readme</key>
-	<string>This Alfred workflow helps you to quickly connect to your AirPods using the Alfred search or a hotkey.
-
-
-Make sure to follow the installation instructions on:
-https://github.com/mariuskiessling/alfred-airpods-connector
-
-On your first run, you have to select the bluetooth device that are your AirPods. Once you have done this you can use the airp keyword to connect / disconnect your AirPods. Whenever you want to change the device you can use the airp config keyword to select a new bluetooth device.
-
-By default, this workflow also offers the ability to trigger a connect / disconnect action using a hotkey. The default hotkey is ⌃ Ctrl + ⇧ Shift + ⌘ Cmd + A.</string>
+	<string>See https://github.com/godbout/alfred-airpods-connector</string>
 	<key>uidata</key>
 	<dict>
 		<key>01344906-E1B8-4115-AED5-B6C0ED22FBDD</key>
@@ -858,6 +916,13 @@ By default, this workflow also offers the ability to trigger a connect / disconn
 			<integer>480</integer>
 			<key>ypos</key>
 			<integer>420</integer>
+		</dict>
+		<key>6A93EB8B-2C09-45EE-B95D-2DEFD43491D5</key>
+		<dict>
+			<key>xpos</key>
+			<integer>740</integer>
+			<key>ypos</key>
+			<integer>545</integer>
 		</dict>
 		<key>73BAEDC1-5F07-4AD6-A185-3BECC006DF8B</key>
 		<dict>
@@ -965,17 +1030,17 @@ By default, this workflow also offers the ability to trigger a connect / disconn
 	<key>variables</key>
 	<dict>
 		<key>AIRPODS_MAC</key>
-		<string></string>
+		<string>38-ec-0d-58-ec-d6</string>
 		<key>WORKFLOW_CONFIGURED</key>
-		<string>false</string>
+		<string>true</string>
 	</dict>
 	<key>variablesdontexport</key>
 	<array>
 		<string>AIRPODS_MAC</string>
 	</array>
 	<key>version</key>
-	<string>1.1</string>
+	<string>1.2</string>
 	<key>webaddress</key>
-	<string>https://mariuskiessling.de/</string>
+	<string>https://sleeplessmind.com.mo</string>
 </dict>
 </plist>
