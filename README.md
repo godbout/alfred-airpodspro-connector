@@ -25,3 +25,8 @@ The original documentation is great and works the same, so go have a look at Mar
 
 Latest release available on the [release page](https://github.com/godbout/alfred-airpods-connector/releases).
 
+# CREDITS
+
+[Marius Kießling](https://github.com/mariuskiessling) for the original Workflow.
+
+
