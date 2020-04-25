@@ -1,7 +1,7 @@
 <h1 align="center">Alfred AirPods Pro Connector</h1>
 
 <p align="center">
-<a href="https://github.com/godbout/alfred-airpods-connector/releases/latest"><img src="https://img.shields.io/github/release/godbout/alfred-airpds-connector.svg?style=flat" alt="GitHub Release"></a>
+<a href="https://github.com/godbout/alfred-airpods-connector/releases/latest"><img src="https://img.shields.io/github/release/godbout/alfred-airpods-connector.svg?style=flat" alt="GitHub Release"></a>
 <a href="https://github.com/godbout/alfred-airpods-connector/releases"><img src="https://img.shields.io/github/downloads/godbout/alfred-airpods-connector/total.svg?style=flat" alt="GitHub Downloads"></a>
 </p>
 
