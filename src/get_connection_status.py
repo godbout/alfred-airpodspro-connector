@@ -13,7 +13,7 @@ if mac == None or mac == "":
             {
                 "uid": 0,
                 "type": "default",
-                "title": "Your setup isn't completet yet.",
+                "title": "Your setup isn't completed yet.",
                 "subtitle": "Configure your AirPods Pro device to get started.",
                 "arg": "unconfigured",
             }
