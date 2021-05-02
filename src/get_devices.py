@@ -4,7 +4,7 @@ import os
 import re
 import json
 
-TRUE, pout = os.popen4('/bin/bash -c /usr/local/bin/BluetoothConnector')
+TRUE, pout = os.popen4('/bin/bash -c BluetoothConnector')
 devicesRaw = pout.read()
 
 deviceMacs = []
