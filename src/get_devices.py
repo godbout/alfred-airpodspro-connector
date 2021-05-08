@@ -4,6 +4,8 @@ import os
 import re
 import json
 
+os.environ['PATH'] = '/opt/homebrew/bin:/usr/local/bin:' + os.environ['PATH']
+
 TRUE, pout = os.popen4('/bin/bash -c BluetoothConnector')
 devicesRaw = pout.read()
 
