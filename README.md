@@ -11,9 +11,7 @@
 
 connect/disconnect your AirPods Pro at whim.
 
-# MANDATORY SCREENSHOTS
-
-![configure](https://raw.githubusercontent.com/godbout/alfred-airpods-connector/media/airpodspro-configure.gif "configure")
+# MANDATORY SCREENSHOT
 
 ![connect/disconnect](https://raw.githubusercontent.com/godbout/alfred-airpods-connector/media/airpodspro-connect-disconnect.gif "connect/disconnect")
 
