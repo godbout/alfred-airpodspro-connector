@@ -31,4 +31,4 @@ Latest release available on the [release page](https://github.com/godbout/alfred
 
 # CREDITS
 
-ME AND ONLY ME.
+[Marius Kießling](https://github.com/mariuskiessling) for the original Workflow. (nothing much left tho, sorry.)
