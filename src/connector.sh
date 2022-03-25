@@ -1,8 +1,8 @@
 SYSTEM_PROFILER=$(system_profiler SPBluetoothDataType 2>/dev/null)
 
 MAC_ADDRESS=$(grep -B8 "Minor Type: Headphones" <<< "${SYSTEM_PROFILER}" | awk '/Address/{ lastline = $2 } END { print lastline }')
-CONNECTED=$(grep -A6 "${MAC_ADDRESS}" <<< "${SYSTEM_PROFILER}" | awk '/Connected: Yes/{ print 1 }')
-NAME=$(grep -B9 "Minor Type: Headphones" <<< "${SYSTEM_PROFILER}" | awk '/^[ ]{10}([A-Za-z]+)/{ lastline = $1 } END { print lastline }' | sed -e 's/://')
+CONNECTED=$(grep -A10 "${MAC_ADDRESS}" <<< "${SYSTEM_PROFILER}" | awk '/Services:/{print 1}')
+NAME=$(grep -B9 "Minor Type: Headphones" <<< "${SYSTEM_PROFILER}" | awk '/AirPods/{ print }' | sed -e 's/^ *//' -e 's/://')
 
 if [[ "${CONNECTED}" ]]; then
   status="disconnect ${NAME}"
