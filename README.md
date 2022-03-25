@@ -17,7 +17,8 @@ connect/disconnect your AirPods Pro at whim.
 
 # SETUP
 
-pair your AirPods Pro at least once with your computer. that's it. the Workflow will then catch up and do its magic.
+* install [BluetoohConnector](https://github.com/lapfelix/BluetoothConnector)
+* pair your AirPods Pro at least once with your computer. that's it. the Workflow will then catch up and do its magic.
 
 # CAVEAT
 
