@@ -215,6 +215,6 @@ go check out to the [GitHub repo](https://github.com/godbout/alfred-airpodspro-c
 	<key>version</key>
 	<string>4.0.0</string>
 	<key>webaddress</key>
-	<string>https://sleeplessmind.com.mo</string>
+	<string>https://github.com/godbout/alfred-airpodspro-connector</string>
 </dict>
 </plist>
