@@ -21,6 +21,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>E0CD2902-7EF6-4532-A8FE-0AC104F66CB2</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>6EB7D5B0-E02F-4DA2-9AFE-BD02E81F15B5</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 	</dict>
 	<key>createdby</key>
 	<string>Guillaume Leclerc</string>
@@ -35,14 +48,47 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
+				<integer>0</integer>
+				<key>focusedappvariable</key>
+				<false/>
+				<key>focusedappvariablename</key>
+				<string></string>
+				<key>hotkey</key>
+				<integer>0</integer>
+				<key>hotmod</key>
+				<integer>0</integer>
+				<key>hotstring</key>
+				<string></string>
+				<key>leftcursor</key>
+				<false/>
+				<key>modsmode</key>
+				<integer>0</integer>
+				<key>relatedAppsMode</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.hotkey</string>
+			<key>uid</key>
+			<string>E0CD2902-7EF6-4532-A8FE-0AC104F66CB2</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>PATH=/usr/local/bin/:/opt/homebrew/bin:$PATH
-
-BluetoothConnector {query}</string>
+				<string>if [[ $(arch) == 'arm64' ]]; then
+  ./resources/binaries/blueutil_arm64 {query}
+else
+  ./resources/binaries/blueutil_i386 {query}
+fi</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -73,7 +119,7 @@ BluetoothConnector {query}</string>
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>keyword</key>
-				<string>apc</string>
+				<string>{var:workflow_keyword}</string>
 				<key>queuedelaycustom</key>
 				<integer>3</integer>
 				<key>queuedelayimmediatelyinitially</key>
@@ -83,9 +129,9 @@ BluetoothConnector {query}</string>
 				<key>queuemode</key>
 				<integer>1</integer>
 				<key>runningsubtext</key>
-				<string>Loading...</string>
+				<string>sniffing around...</string>
 				<key>script</key>
-				<string>sh src/connector.sh</string>
+				<string>bash resources/scripts/connector.sh</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -108,28 +154,66 @@ BluetoothConnector {query}</string>
 		</dict>
 	</array>
 	<key>readme</key>
-	<string>See https://github.com/godbout/alfred-airpods-connector</string>
+	<string>## Connect 
+
+once your AirPods Pro have been paired with your Mac, just type `apc` to connect or disconnect them at whim.
+
+![connector](resources/images/connect.png)
+![disconnector haha](resources/images/disconnect.png)
+
+## More info?
+
+go check out to the [GitHub repo](https://github.com/godbout/alfred-airpodspro-connector)!</string>
 	<key>uidata</key>
 	<dict>
 		<key>6EB7D5B0-E02F-4DA2-9AFE-BD02E81F15B5</key>
 		<dict>
 			<key>xpos</key>
-			<integer>210</integer>
+			<real>30</real>
 			<key>ypos</key>
-			<integer>195</integer>
+			<real>200</real>
+		</dict>
+		<key>E0CD2902-7EF6-4532-A8FE-0AC104F66CB2</key>
+		<dict>
+			<key>xpos</key>
+			<real>30</real>
+			<key>ypos</key>
+			<real>15</real>
 		</dict>
 		<key>F0F0DF22-8D94-4A6F-89A2-ACEC737045C1</key>
 		<dict>
 			<key>xpos</key>
-			<integer>525</integer>
+			<real>270</real>
 			<key>ypos</key>
-			<integer>195</integer>
+			<real>200</real>
 		</dict>
 	</dict>
-	<key>variablesdontexport</key>
-	<array/>
+	<key>userconfigurationconfig</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string>apc</string>
+				<key>placeholder</key>
+				<string></string>
+				<key>required</key>
+				<false/>
+				<key>trim</key>
+				<true/>
+			</dict>
+			<key>description</key>
+			<string></string>
+			<key>label</key>
+			<string>Workflow Keyword</string>
+			<key>type</key>
+			<string>textfield</string>
+			<key>variable</key>
+			<string>workflow_keyword</string>
+		</dict>
+	</array>
 	<key>version</key>
-	<string>3.0.1</string>
+	<string>4.0.0</string>
 	<key>webaddress</key>
 	<string>https://sleeplessmind.com.mo</string>
 </dict>
