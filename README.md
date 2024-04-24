@@ -17,6 +17,7 @@ connect/disconnect your AirPods Pro at whim.
 
 # SETUP
 
+* give Bluetooth permissions to Alfred 5 (macOS 14+)
 * pair your AirPods Pro at least once with your computer. that's it. the Workflow will then catch up and do its magic.
 
 # CAVEAT
