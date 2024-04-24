@@ -4,8 +4,6 @@
 <dict>
 	<key>bundleid</key>
 	<string>mo.com.sleeplessmind.airpods-pro-connector</string>
-	<key>category</key>
-	<string>Tools</string>
 	<key>connections</key>
 	<dict>
 		<key>6EB7D5B0-E02F-4DA2-9AFE-BD02E81F15B5</key>
@@ -60,8 +58,6 @@
 				<integer>0</integer>
 				<key>hotmod</key>
 				<integer>0</integer>
-				<key>hotstring</key>
-				<string></string>
 				<key>leftcursor</key>
 				<false/>
 				<key>modsmode</key>
@@ -154,7 +150,11 @@ fi</string>
 		</dict>
 	</array>
 	<key>readme</key>
-	<string>## Connect 
+	<string>## ⚠️ macOS 14 ⚠️
+
+since somewhere along the macOS 14 release Apple requires Alfred 5 to have the Bluetooth permissions enabled in order to connect and disconnect bluetooth devices. you can paste this: `open "x-apple.systempreferences:com.apple.preference.security?Privacy_Bluetooth"` in your terminal to access the UI and add Alfred manually.
+
+## Connect 
 
 once your AirPods Pro have been paired with your Mac, just type `apc` to connect or disconnect them at whim.
 
@@ -168,6 +168,8 @@ go check out to the [GitHub repo](https://github.com/godbout/alfred-airpodspro-c
 	<dict>
 		<key>6EB7D5B0-E02F-4DA2-9AFE-BD02E81F15B5</key>
 		<dict>
+			<key>note</key>
+			<string>⚠️ make sure Alfred 5 has Bluetooth permissions ⚠️</string>
 			<key>xpos</key>
 			<real>30</real>
 			<key>ypos</key>
@@ -212,8 +214,10 @@ go check out to the [GitHub repo](https://github.com/godbout/alfred-airpodspro-c
 			<string>workflow_keyword</string>
 		</dict>
 	</array>
+	<key>variablesdontexport</key>
+	<array/>
 	<key>version</key>
-	<string>4.0.0</string>
+	<string>4.1.0</string>
 	<key>webaddress</key>
 	<string>https://github.com/godbout/alfred-airpodspro-connector</string>
 </dict>
