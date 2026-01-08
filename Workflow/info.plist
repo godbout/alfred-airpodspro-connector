@@ -4,6 +4,8 @@
 <dict>
 	<key>bundleid</key>
 	<string>mo.com.sleeplessmind.airpods-pro-connector</string>
+	<key>category</key>
+	<string>Productivity</string>
 	<key>connections</key>
 	<dict>
 		<key>6EB7D5B0-E02F-4DA2-9AFE-BD02E81F15B5</key>
