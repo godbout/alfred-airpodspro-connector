@@ -34,6 +34,8 @@
 				<false/>
 			</dict>
 		</array>
+		<key>F0F0DF22-8D94-4A6F-89A2-ACEC737045C1</key>
+		<array/>
 	</dict>
 	<key>createdby</key>
 	<string>Guillaume Leclerc</string>
@@ -60,6 +62,8 @@
 				<integer>0</integer>
 				<key>hotmod</key>
 				<integer>0</integer>
+				<key>hotstring</key>
+				<string></string>
 				<key>leftcursor</key>
 				<false/>
 				<key>modsmode</key>
