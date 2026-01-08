@@ -216,10 +216,8 @@ go check out to the [GitHub repo](https://github.com/godbout/alfred-airpodspro-c
 			<string>workflow_keyword</string>
 		</dict>
 	</array>
-	<key>variablesdontexport</key>
-	<array/>
 	<key>version</key>
-	<string>4.1.0</string>
+	<string>5.0.0</string>
 	<key>webaddress</key>
 	<string>https://github.com/godbout/alfred-airpodspro-connector</string>
 </dict>
