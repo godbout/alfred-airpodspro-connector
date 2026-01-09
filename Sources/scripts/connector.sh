@@ -1,7 +1,7 @@
 #!/bin/zsh
 
-SYSTEM_PROFILER=$(system_profiler SPBluetoothDataType 2>/dev/null)
-HEADPHONES=$(grep -B9 "Minor Type: Headphones" <<< "${SYSTEM_PROFILER}")
+WHOLE_BLUETOOTH_DATA=$(system_profiler SPBluetoothDataType 2>/dev/null)
+HEADPHONES=$(grep -B9 "Minor Type: Headphones" <<< "${WHOLE_BLUETOOTH_DATA}")
 
 print_device() {
     if [ "$device" != "" ]; then
