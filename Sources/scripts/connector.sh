@@ -34,11 +34,9 @@ if [[ "$HEADPHONES_COUNT" != "0"  ]]; then
     ## split HEADPHONES into devices
     echo "${HEADPHONES}" | while read -r line
     do
-        if [ "$headphone" = "" ]
-            then
+        if [[ "$headphone" = "" ]]; then
             headphone="$line"
-        elif [ "$line" = "--" ]
-            then
+        elif [[ "$line" = "--" ]]; then
             print_headphone_as_alfred_result_item # print device in XML
             headphone=""
         else
