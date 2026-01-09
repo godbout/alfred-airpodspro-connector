@@ -15,6 +15,11 @@ connect/disconnect your AirPods Pro at whim.
 
 ![connect/disconnect](https://raw.githubusercontent.com/godbout/alfred-airpods-connector/media/alfred-airpodspro-connector.gif "connect/disconnect")
 
+# FEATURES
+
+* handles multiple AirPods Pros
+* should handle any Apple headphones really, including Beats
+
 # SETUP
 
 * give Bluetooth permissions to Alfred 5 (macOS 14+)
