@@ -50,7 +50,7 @@ cat << EOB
     {"items": [
         {
             "uid": "connector",
-            "title": "no headphones paired",
+            "title": "no paired headphones found",
         }
     ]}
 EOB
