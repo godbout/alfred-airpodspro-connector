@@ -20,10 +20,6 @@ connect/disconnect your AirPods Pro at whim.
 * give Bluetooth permissions to Alfred 5 (macOS 14+)
 * pair your AirPods Pro at least once with your computer. that's it. the Workflow will then catch up and do its magic.
 
-# CAVEAT
-
-it's so magical that currently it handles only one bluetooth headphones. ping me if you're rich and need multiple connections.
-
 # DOWNLOAD
 
 Latest release available on the [release page](https://github.com/godbout/alfred-airpods-connector/releases).
