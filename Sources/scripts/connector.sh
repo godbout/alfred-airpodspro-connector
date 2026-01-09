@@ -25,7 +25,6 @@ HEADPHONES=$(grep -B9 "Minor Type: Headphones" <<< "${WHOLE_BLUETOOTH_DATA}")
 HEADPHONES_COUNT=$(echo $HEADPHONES | grep -c "Minor Type: Headphones")
 
 if [[ "$HEADPHONES_COUNT" != "0"  ]]; then
-
     echo "<?xml version='1.0' encoding='utf-8'?> <items>" # use XML as it will be easier to print logs to the output into alfred with echo
 
     nl=$'\n'
@@ -34,7 +33,6 @@ if [[ "$HEADPHONES_COUNT" != "0"  ]]; then
     HEADPHONES="$HEADPHONES$nl--" # append a separator to the end
 
     ## split HEADPHONES into devices
-
     echo "${HEADPHONES}" | while read -r line
     do
         if [ "$device" = "" ]
@@ -50,7 +48,6 @@ if [[ "$HEADPHONES_COUNT" != "0"  ]]; then
     done
 
     echo "</items>"
-
 else
 cat << EOB
     {"items": [
