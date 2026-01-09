@@ -12,7 +12,6 @@ function print_headphone_as_alfred_result_item() {
         fi
 
         if [[ "${CONNECTED}" == 1 ]]; then
-          # disconnect doesn't work on Monterey if we don't force notify LMAO
           echo "<item> <title>disconnect ${NAME%?}</title> <arg>--disconnect ${MAC_ADDRESS//:/-}</arg> </item>"
         else
           echo "<item> <title>connect ${NAME%?}</title> <arg>--connect ${MAC_ADDRESS//:/-}</arg> </item>"
