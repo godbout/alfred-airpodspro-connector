@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-print_device() {
+function print_headphone_as_alfred_result_item() {
     if [ "$headphone" != "" ]; then
         MAC_ADDRESS=$(echo "${headphone}" | awk '/Address/{print $2}')
         NAME=$(echo "${headphone}" | awk '/Address/ {print prev} {prev=$0}')
@@ -40,7 +40,7 @@ if [[ "$HEADPHONES_COUNT" != "0"  ]]; then
             headphone="$line"
         elif [ "$line" = "--" ]
             then
-            print_device # print device in XML
+            print_headphone_as_alfred_result_item # print device in XML
             headphone=""
         else
             headphone="$headphone$nl$line" # append more lines to the device
