@@ -11,14 +11,14 @@
 
 connect/disconnect your AirPods Pro at whim.
 
-# MANDATORY SCREENSHOT
-
-![connect/disconnect](https://raw.githubusercontent.com/godbout/alfred-airpods-connector/media/alfred-airpodspro-connector.gif "connect/disconnect")
-
 # FEATURES
 
 * handles multiple AirPods Pros
 * should handle any Apple headphones really, including Beats
+
+# MANDATORY SCREENSHOT
+
+![connect/disconnect](https://raw.githubusercontent.com/godbout/alfred-airpods-connector/media/alfred-airpodspro-connector.gif "connect/disconnect")
 
 # SETUP
 
