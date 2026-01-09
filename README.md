@@ -16,9 +16,9 @@ connect/disconnect your AirPods Pro at whim.
 * handles multiple AirPods Pros
 * should handle any Apple headphones really, including Beats
 
-# MANDATORY SCREENSHOT
+# BIG MANDATORY SCREENSHOT
 
-![connect/disconnect](https://raw.githubusercontent.com/godbout/alfred-airpods-connector/media/alfred-airpodspro-connector.gif "connect/disconnect")
+![apc](https://github.com/user-attachments/assets/42f05bef-b46e-4fd2-8361-138d665f2a63)
 
 # SETUP
 
