@@ -1,9 +1,9 @@
 #!/bin/zsh
 
 print_device() {
-    if [ "$device" != "" ]; then
-        MAC_ADDRESS=$(echo "${device}" | awk '/Address/{print $2}')
-        NAME=$(echo "${device}" | awk '/Address/ {print prev} {prev=$0}')
+    if [ "$headphone" != "" ]; then
+        MAC_ADDRESS=$(echo "${headphone}" | awk '/Address/{print $2}')
+        NAME=$(echo "${headphone}" | awk '/Address/ {print prev} {prev=$0}')
 
         if [[ $(arch) == 'arm64' ]]; then
           CONNECTED=$(resources/binaries/blueutil_arm64 --is-connected ${MAC_ADDRESS})
@@ -35,15 +35,15 @@ if [[ "$HEADPHONES_COUNT" != "0"  ]]; then
     ## split HEADPHONES into devices
     echo "${HEADPHONES}" | while read -r line
     do
-        if [ "$device" = "" ]
+        if [ "$headphone" = "" ]
             then
-            device="$line"
+            headphone="$line"
         elif [ "$line" = "--" ]
             then
             print_device # print device in XML
-            device=""
+            headphone=""
         else
-            device="$device$nl$line" # append more lines to the device
+            headphone="$headphone$nl$line" # append more lines to the device
         fi
     done
 
