@@ -18,6 +18,7 @@ connect/disconnect your AirPods Pro at whim.
 
 # BIG MANDATORY SCREENSHOT
 
+![apc](https://github.com/user-attachments/assets/b847e9e6-4a59-4096-b541-e146dc508e32)
 
 # SETUP
 
