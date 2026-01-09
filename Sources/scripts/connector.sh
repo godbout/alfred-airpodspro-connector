@@ -1,8 +1,5 @@
 #!/bin/zsh
 
-WHOLE_BLUETOOTH_DATA=$(system_profiler SPBluetoothDataType 2>/dev/null)
-HEADPHONES=$(grep -B9 "Minor Type: Headphones" <<< "${WHOLE_BLUETOOTH_DATA}")
-
 print_device() {
     if [ "$device" != "" ]; then
         MAC_ADDRESS=$(echo "${device}" | awk '/Address/{print $2}')
@@ -23,6 +20,8 @@ print_device() {
     fi
 }
 
+WHOLE_BLUETOOTH_DATA=$(system_profiler SPBluetoothDataType 2>/dev/null)
+HEADPHONES=$(grep -B9 "Minor Type: Headphones" <<< "${WHOLE_BLUETOOTH_DATA}")
 COUNT=$(echo $HEADPHONES | grep -c "Minor Type: Headphones")
 
 if [[ "$COUNT" != "0"  ]]; then
