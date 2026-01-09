@@ -21,9 +21,9 @@ function print_headphone_as_alfred_result_item() {
 
 WHOLE_BLUETOOTH_DATA=$(system_profiler SPBluetoothDataType 2>/dev/null)
 HEADPHONES=$(grep -B9 "Minor Type: Headphones" <<< "${WHOLE_BLUETOOTH_DATA}")
-HEADPHONES_COUNT=$(echo $HEADPHONES | grep -c "Minor Type: Headphones")
+APPLE_AND_BEATS_HEADPHONES_COUNT=$(echo $HEADPHONES | grep -c "Vendor ID: 0x004C")
 
-if [[ "$HEADPHONES_COUNT" != "0"  ]]; then
+if [[ "$APPLE_AND_BEATS_HEADPHONES_COUNT" != "0"  ]]; then
     echo "<?xml version='1.0' encoding='utf-8'?> <items>" # use XML as it will be easier to print logs to the output into alfred with echo
 
     nl=$'\n'
