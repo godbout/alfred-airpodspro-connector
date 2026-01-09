@@ -160,14 +160,13 @@ fi</string>
 
 since somewhere along the macOS 14 release Apple requires Alfred 5 to have the Bluetooth permissions enabled in order to connect and disconnect bluetooth devices. you can paste this: `open "x-apple.systempreferences:com.apple.preference.security?Privacy_Bluetooth"` in your terminal to access the UI and add Alfred manually.
 
-## Connect 
+## Connect / Disconnect
 
-once your AirPods Pro have been paired with your Mac, just type `apc` to connect or disconnect them at whim.
+once your AirPods Pro(s) have been paired with your Mac just type `apc` to list them and connect or disconnect them at whim.
 
-![connector](resources/images/connect.png)
-![disconnector haha](resources/images/disconnect.png)
+![apc](resources/images/apc.png)
 
-## More info?
+## Need More info?
 
 go check out to the [GitHub repo](https://github.com/godbout/alfred-airpodspro-connector)!</string>
 	<key>uidata</key>
@@ -204,7 +203,7 @@ go check out to the [GitHub repo](https://github.com/godbout/alfred-airpodspro-c
 				<key>default</key>
 				<string>apc</string>
 				<key>placeholder</key>
-				<string></string>
+				<string>apc</string>
 				<key>required</key>
 				<false/>
 				<key>trim</key>
@@ -213,7 +212,7 @@ go check out to the [GitHub repo](https://github.com/godbout/alfred-airpodspro-c
 			<key>description</key>
 			<string></string>
 			<key>label</key>
-			<string>Workflow Keyword</string>
+			<string>List paired AirPods Pro with</string>
 			<key>type</key>
 			<string>textfield</string>
 			<key>variable</key>
