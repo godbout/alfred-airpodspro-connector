@@ -1,12 +1,9 @@
 #!/bin/zsh
 
-SYSTEM_PROFILER=$(system_profiler SPBluetoothDataType 2>/dev/null)
-HEADPHONES=$(grep -B9 "Minor Type: Headphones" <<< "${SYSTEM_PROFILER}")
-
-print_device() {
-    if [ "$device" != "" ]; then
-        MAC_ADDRESS=$(echo "${device}" | awk '/Address/{print $2}')
-        NAME=$(echo "${device}" | awk '/Address/ {print prev} {prev=$0}')
+function print_headphone_as_alfred_result_item() {
+    if [ "$headphone" != "" ]; then
+        MAC_ADDRESS=$(echo "${headphone}" | awk '/Address/{print $2}')
+        NAME=$(echo "${headphone}" | awk '/Address/ {print prev} {prev=$0}')
 
         if [[ $(arch) == 'arm64' ]]; then
           CONNECTED=$(resources/binaries/blueutil_arm64 --is-connected ${MAC_ADDRESS})
@@ -15,7 +12,6 @@ print_device() {
         fi
 
         if [[ "${CONNECTED}" == 1 ]]; then
-          # disconnect doesn't work on Monterey if we don't force notify LMAO
           echo "<item> <title>disconnect ${NAME%?}</title> <arg>--disconnect ${MAC_ADDRESS//:/-}</arg> </item>"
         else
           echo "<item> <title>connect ${NAME%?}</title> <arg>--connect ${MAC_ADDRESS//:/-}</arg> </item>"
@@ -23,10 +19,11 @@ print_device() {
     fi
 }
 
-COUNT=$(echo $HEADPHONES | grep -c "Minor Type: Headphones")
+WHOLE_BLUETOOTH_DATA=$(system_profiler SPBluetoothDataType 2>/dev/null)
+HEADPHONES=$(grep -B9 "Minor Type: Headphones" <<< "${WHOLE_BLUETOOTH_DATA}")
+APPLE_AND_BEATS_HEADPHONES_COUNT=$(echo $HEADPHONES | grep -c "Vendor ID: 0x004C")
 
-if [[ "$COUNT" != "0"  ]]; then
-
+if [[ "$APPLE_AND_BEATS_HEADPHONES_COUNT" != "0"  ]]; then
     echo "<?xml version='1.0' encoding='utf-8'?> <items>" # use XML as it will be easier to print logs to the output into alfred with echo
 
     nl=$'\n'
@@ -35,29 +32,25 @@ if [[ "$COUNT" != "0"  ]]; then
     HEADPHONES="$HEADPHONES$nl--" # append a separator to the end
 
     ## split HEADPHONES into devices
-
     echo "${HEADPHONES}" | while read -r line
     do
-        if [ "$device" = "" ]
-            then
-            device="$line"
-        elif [ "$line" = "--" ]
-            then
-            print_device # print device in XML
-            device=""
+        if [[ "$headphone" = "" ]]; then
+            headphone="$line"
+        elif [[ "$line" = "--" ]]; then
+            print_headphone_as_alfred_result_item # print device in XML
+            headphone=""
         else
-            device="$device$nl$line" # append more lines to the device
+            headphone="$headphone$nl$line" # append more lines to the device
         fi
     done
 
     echo "</items>"
-
 else
 cat << EOB
     {"items": [
         {
             "uid": "connector",
-            "title": "no headphones paired",
+            "title": "no paired headphones found",
         }
     ]}
 EOB
